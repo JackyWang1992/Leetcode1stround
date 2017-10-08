@@ -1,0 +1,23 @@
+class Solution {
+    public void moveZeroes(int[] nums) {
+        
+        if (nums == null || nums.length == 0 ){
+            return;
+        }
+        int pPosi = 0; 
+        int n = nums.length;
+        for (int i = 0; i <= n-1; i++){
+        if (nums[i] != 0 ){
+            nums[pPosi] = nums[i];
+            pPosi++;
+        }
+        }
+        
+       if (pPosi < n){
+        while (pPosi<n){
+           nums[pPosi] = 0;
+           pPosi++;
+    }
+    }
+}
+}
